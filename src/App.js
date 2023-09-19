@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Weather from "./Weather.js";
+import "./App.css";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div>
+        <Weather />
+      </div>
+      <footer>
+        Project Created by{" "}
         <a
-          className="App-link"
-          href="https://reactjs.org"
+          href="https://unrivaled-gingersnap-27115c.netlify.app"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noreferrer"
         >
-          Learn React
+          Aimen Zafar
         </a>
-      </header>
+        , Open sourced on{" "}
+        <a
+          href="https://unrivaled-gingersnap-27115c.netlify.app"
+          target="_blank"
+          rel="noreferrer"
+        >
+          GitHub
+        </a>
+        , and Hosted on{" "}
+        <a
+          href="https://unrivaled-gingersnap-27115c.netlify.app"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Netlify
+        </a>
+        .
+      </footer>
     </div>
   );
 }
-
-export default App;
