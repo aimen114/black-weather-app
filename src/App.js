@@ -4,7 +4,7 @@ import "./App.css";
 
 export default function App() {
   return (
-    <div className="App">
+    <div className="App container">
       <div>
         <Weather />
       </div>
@@ -19,7 +19,7 @@ export default function App() {
         </a>
         , Open sourced on{" "}
         <a
-          href="https://unrivaled-gingersnap-27115c.netlify.app"
+          href="https://github.com/aimen114/black-weather-app.git"
           target="_blank"
           rel="noreferrer"
         >

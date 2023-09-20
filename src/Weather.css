@@ -1,0 +1,10 @@
+.Weather {
+  color: white;
+  background-color: black;
+  border-radius: 15px;
+  margin: 0 auto;
+}
+.today-date {
+  text-align: end;
+  opacity: 0.5;
+}
