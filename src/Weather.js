@@ -1,4 +1,5 @@
 import React from "react";
+import "bootstrap/dist/css/bootstrap.css";
 import "./Weather.css";
 
 export default function Weather() {
@@ -11,15 +12,15 @@ export default function Weather() {
               Vancouver <i>🔽</i> <i>📍</i>
             </h1>
             <br />
-            <div class="input-group mb-3">
+            <div className="input-group mb-3">
               <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 placeholder="Search"
                 aria-describedby="button-addon2"
               />
               <button
-                class="btn btn-outline-secondary"
+                className="btn btn-outline-secondary"
                 type="button"
                 id="button-addon2"
               >
@@ -29,10 +30,11 @@ export default function Weather() {
           </div>
           <div className="today-date">July 16, Thursday</div>
         </div>
-        <div className="col">
-          <div className="current-temp">25</div>
-          <div className="c-sign">℃</div>
-          <br />
+        <div className="col text-end">
+          <div className="today-temp">
+            <div className="current-temp">25</div>
+            <div className="c-sign">℃</div>
+          </div>
           <div className="today-feeling">Feels like 32°</div>
         </div>
         <div className="row">
