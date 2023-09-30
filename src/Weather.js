@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import FormattedDate from "./FormattedDate";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { icon } from "@fortawesome/fontawesome-svg-core/import.macro";
 import axios from "axios";
@@ -26,6 +27,7 @@ export default function Weather() {
       icon: response.data.condition.icon,
       iconUrl:
         "http://shecodes-assets.s3.amazonaws.com/api/weather/icons/mist.png",
+      date: new Date(response.data.time * 1000),
     });
   }
   if (weatherData.ready) {
@@ -66,7 +68,9 @@ export default function Weather() {
                 </div>
               )}
             </div>
-            <div className="today-date">July 16, Thursday</div>
+            <div className="today-date">
+              <FormattedDate date={weatherData.date} />
+            </div>
           </div>
           <div className="col-4 text-end temp-col">
             <div className="today-temp">
@@ -84,8 +88,6 @@ export default function Weather() {
           <div className="today-circle">
             <div className="today-circle-content">
               <img src={weatherData.iconUrl} alt={weatherData.description} />
-              <br />
-              Rain
             </div>
           </div>
           <div className="row today-info">
@@ -106,7 +108,7 @@ export default function Weather() {
     );
   } else {
     const apiKey = "95aba4bfo096ef39t52469746eae7704";
-    let city = "vancouver";
+    let city = "islamabad";
     let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleSubmit);
     return "Laoding ...";
