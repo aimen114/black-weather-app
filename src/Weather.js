@@ -11,10 +11,12 @@ export default function Weather() {
 
   const [weatherData, setWeatherData] = useState({ ready: false });
 
+  const [city, setCity] = useState("islamabad");
+
   function toggleSearchArea() {
     setSearchAreaOpen(!isSearchAreaOpen);
   }
-  function handleSubmit(response) {
+  function handleSearch(response) {
     console.log(response.data);
     setWeatherData({
       ready: true,
@@ -25,11 +27,26 @@ export default function Weather() {
       wind: response.data.wind.speed,
       description: response.data.condition.description,
       icon: response.data.condition.icon,
-      iconUrl:
-        "http://shecodes-assets.s3.amazonaws.com/api/weather/icons/mist.png",
+      iconUrl: `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`,
       date: new Date(response.data.time * 1000),
     });
   }
+  function search() {
+    const apiKey = "95aba4bfo096ef39t52469746eae7704";
+
+    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleSearch);
+  }
+  function handleSubmit(event) {
+    event.preventDefault();
+    toggleSearchArea();
+    //search city
+    search();
+  }
+  function handleCityChange(event) {
+    setCity(event.target.value);
+  }
+
   if (weatherData.ready) {
     return (
       <div className="Weather">
@@ -49,23 +66,24 @@ export default function Weather() {
               </h1>
               <br />
               {isSearchAreaOpen && (
-                <div className="input-group mb-3">
+                <form className="input-group mb-3" onSubmit={handleSubmit}>
                   <input
                     type="text"
                     className="form-control search-bar"
                     placeholder="Search"
                     aria-describedby="button-addon2"
+                    onChange={handleCityChange}
                   />
                   <button
                     className="btn btn-outline-secondary search-bar-icon"
-                    type="button"
+                    type="submit"
                     id="button-addon2"
                   >
                     <FontAwesomeIcon
                       icon={icon({ name: "magnifying-glass" })}
                     />
                   </button>
-                </div>
+                </form>
               )}
             </div>
             <div className="today-date">
@@ -84,6 +102,7 @@ export default function Weather() {
             </div>
           </div>
         </div>
+
         <div className="second-section">
           <div className="today-circle">
             <div className="today-circle-content">
@@ -93,12 +112,12 @@ export default function Weather() {
           <div className="row today-info">
             <div className="col weather-desc">{weatherData.description}</div>
 
-            <div className="col text-end me-2 humidity">
+            <div className="col text-end  humidity">
               <FontAwesomeIcon icon={icon({ name: "droplet" })} />{" "}
               {Math.round(weatherData.humidity)}%
             </div>
 
-            <div className="col text-end me-2 wind">
+            <div className="col text-end  wind">
               <FontAwesomeIcon icon={icon({ name: "wind" })} />{" "}
               {Math.round(weatherData.wind)} Km
             </div>
@@ -107,10 +126,7 @@ export default function Weather() {
       </div>
     );
   } else {
-    const apiKey = "95aba4bfo096ef39t52469746eae7704";
-    let city = "islamabad";
-    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(handleSubmit);
+    search();
     return "Laoding ...";
   }
 }
