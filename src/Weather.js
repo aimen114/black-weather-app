@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import FormattedDate from "./FormattedDate";
+import WeatherIcon from "./WeatherIcon";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { icon } from "@fortawesome/fontawesome-svg-core/import.macro";
 import axios from "axios";
@@ -106,7 +107,7 @@ export default function Weather() {
         <div className="second-section">
           <div className="today-circle">
             <div className="today-circle-content">
-              <img src={weatherData.iconUrl} alt={weatherData.description} />
+              <WeatherIcon code={weatherData.icon} />
             </div>
           </div>
           <div className="row today-info">
