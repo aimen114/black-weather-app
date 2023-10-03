@@ -38,10 +38,10 @@ h1 {
   margin-bottom: 0 auto;
   justify-content: flex-end;
   position: relative;
-  left: -10px;
+  left: -18px;
 }
 .current-temp {
-  font-size: 60px;
+  font-size: 50px;
   line-height: 40px;
 }
 .c-sign {
@@ -59,14 +59,42 @@ h1 {
   width: 200px;
   height: 200px;
 
-  box-shadow: inset -4px -5px 12px 5px rgba(119, 171, 255, 0.807);
-
   border: 1px solid transparent;
   border-radius: 20px;
   margin: 2% auto;
   margin-bottom: 60px;
   border-radius: 50%;
   position: relative;
+}
+.today-circle-night {
+  box-shadow: inset -4px -5px 12px 5px rgba(119, 171, 255, 0.807);
+}
+.today-circle-day {
+  box-shadow: inset -4px -5px 12px 5px rgba(220, 155, 17, 0.807);
+}
+.today-circle-rain-day {
+  box-shadow: inset -4px -5px 12px 5px rgba(201, 161, 199, 0.807);
+}
+.today-circle-rain-night {
+  box-shadow: inset -4px -5px 12px 5px rgba(166, 97, 163, 0.807);
+}
+.today-circle-cloud-day {
+  box-shadow: inset -4px -5px 12px 5px rgba(193, 193, 193, 0.807);
+}
+.today-circle-cloud-night {
+  box-shadow: inset -4px -5px 12px 5px rgba(135, 135, 135, 0.807);
+}
+.today-circle-snow-day {
+  box-shadow: inset -4px -5px 12px 5px rgba(255, 255, 255, 0.807);
+}
+.today-circle-snow-night {
+  box-shadow: inset -4px -5px 12px 5px rgba(233, 233, 233, 0.807);
+}
+.today-circle-wind-day {
+  box-shadow: inset -4px -5px 12px 5px rgba(83, 203, 233, 0.807);
+}
+.today-circle-wind-night {
+  box-shadow: inset -4px -5px 12px 5px rgba(61, 150, 172, 0.807);
 }
 .Weather .today-circle-content canvas {
   position: absolute;
@@ -80,10 +108,43 @@ h1 {
   display: flex;
   justify-content: space-around;
   line-height: 60px;
-  margin: 2% auto;
+
   padding: 2%;
-  box-shadow: inset -4px -5px 10px 5px rgba(119, 171, 255, 0.807);
+
   border-radius: 20px;
+}
+.today-info-night {
+  box-shadow: inset -4px -5px 10px 5px rgba(119, 171, 255, 0.807);
+}
+.today-info-day {
+  box-shadow: inset -4px -5px 10px 5px rgba(220, 155, 17, 0.807);
+}
+.today-info-cloudy {
+  box-shadow: inset -4px -5px 10px 5px rgba(219, 221, 106, 0.807);
+}
+.today-info-rain-day {
+  box-shadow: inset -4px -5px 10px 5px rgba(201, 161, 199, 0.807);
+}
+.today-info-rain-night {
+  box-shadow: inset -4px -5px 10px 5px rgba(166, 97, 163, 0.807);
+}
+.today-info-cloud-day {
+  box-shadow: inset -4px -5px 10px 5px rgba(193, 193, 193, 0.807);
+}
+.today-info-cloud-night {
+  box-shadow: inset -4px -5px 10px 5px rgba(135, 135, 135, 0.807);
+}
+.today-info-snow-day {
+  box-shadow: inset -4px -5px 10px 5px rgba(255, 255, 255, 0.807);
+}
+.today-info-snow-night {
+  box-shadow: inset -4px -5px 10px 5px rgba(233, 233, 233, 0.807);
+}
+.today-info-wind-day {
+  box-shadow: inset -4px -5px 10px 5px rgba(83, 203, 233, 0.807);
+}
+.today-info-wind-night {
+  box-shadow: inset -4px -5px 10px 5px rgba(61, 150, 172, 0.807);
 }
 .weather-desc {
   display: flex;

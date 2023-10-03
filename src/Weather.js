@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import FormattedDate from "./FormattedDate";
 import WeatherCircle from "./WeatherCircle";
+import TodayInfoTab from "./TodayInfoTab";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { icon } from "@fortawesome/fontawesome-svg-core/import.macro";
 import axios from "axios";
@@ -91,7 +92,7 @@ export default function Weather() {
               <FormattedDate date={weatherData.date} />
             </div>
           </div>
-          <div className="col-4 text-end temp-col">
+          <div className="col-4 text-end">
             <div className="today-temp">
               <div className="current-temp">
                 {Math.round(weatherData.temperature)}
@@ -105,20 +106,8 @@ export default function Weather() {
         </div>
 
         <div className="second-section">
-          <WeatherCircle icon={weatherData.icon} />
-          <div className="row today-info">
-            <div className="col weather-desc">{weatherData.description}</div>
-
-            <div className="col text-end  humidity">
-              <FontAwesomeIcon icon={icon({ name: "droplet" })} />{" "}
-              {Math.round(weatherData.humidity)}%
-            </div>
-
-            <div className="col text-end  wind">
-              <FontAwesomeIcon icon={icon({ name: "wind" })} />{" "}
-              {Math.round(weatherData.wind)} Km
-            </div>
-          </div>
+          <WeatherCircle icon={weatherData} />
+          <TodayInfoTab info={weatherData} />
         </div>
       </div>
     );
