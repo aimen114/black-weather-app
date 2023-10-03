@@ -26,7 +26,7 @@ export default function App() {
           </a>
           , and Hosted on{" "}
           <a
-            href="https://unrivaled-gingersnap-27115c.netlify.app"
+            href="https://effulgent-cuchufli-6a84ab.netlify.app"
             target="_blank"
             rel="noreferrer"
           >

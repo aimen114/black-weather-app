@@ -9,8 +9,8 @@
 }
 h1 {
   margin: 0 auto;
-  font-size: 30px;
-  font-weight: 400;
+  font-size: 25px;
+  font-weight: 200;
 }
 
 .second-section {
@@ -38,7 +38,7 @@ h1 {
   margin-bottom: 0 auto;
   justify-content: flex-end;
   position: relative;
-  left: -18px;
+  left: -8px;
 }
 .current-temp {
   font-size: 50px;
@@ -50,6 +50,7 @@ h1 {
 .today-feeling {
   position: relative;
   top: 8px;
+  right: 12px;
 }
 .width-100 {
   width: fit-content;

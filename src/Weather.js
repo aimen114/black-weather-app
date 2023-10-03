@@ -92,7 +92,7 @@ export default function Weather() {
               <FormattedDate date={weatherData.date} />
             </div>
           </div>
-          <div className="col-4 text-end">
+          <div className="col-5 text-end">
             <div className="today-temp">
               <div className="current-temp">
                 {Math.round(weatherData.temperature)}
