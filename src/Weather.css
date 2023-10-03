@@ -38,7 +38,6 @@ h1 {
   margin-bottom: 0 auto;
   justify-content: flex-end;
   position: relative;
-  left: -8px;
 }
 .current-temp {
   font-size: 50px;
@@ -50,7 +49,6 @@ h1 {
 .today-feeling {
   position: relative;
   top: 8px;
-  right: 12px;
 }
 .width-100 {
   width: fit-content;
