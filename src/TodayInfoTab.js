@@ -1,4 +1,5 @@
 import React from "react";
+import "bootstrap/dist/css/bootstrap.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { icon } from "@fortawesome/fontawesome-svg-core/import.macro";
 
@@ -26,9 +27,7 @@ export default function TodayInfoTab(props) {
   return (
     <div className="TodayInfoTab">
       <div className={`row today-info ${colormap[props.info.icon]}`}>
-        <div className="col text-start weather-desc">
-          {props.info.description}
-        </div>
+        <div className="col  weather-desc">{props.info.description}</div>
 
         <div className="col text-end ">
           <FontAwesomeIcon icon={icon({ name: "droplet" })} />{" "}

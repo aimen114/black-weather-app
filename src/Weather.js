@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import FormattedDate from "./FormattedDate";
 import WeatherCircle from "./WeatherCircle";
 import TodayInfoTab from "./TodayInfoTab";
+import WeatherForecast from "./WeatherForecast";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { icon } from "@fortawesome/fontawesome-svg-core/import.macro";
 import axios from "axios";
@@ -108,6 +109,9 @@ export default function Weather() {
         <div className="second-section">
           <WeatherCircle icon={weatherData} />
           <TodayInfoTab info={weatherData} />
+        </div>
+        <div>
+          <WeatherForecast />
         </div>
       </div>
     );

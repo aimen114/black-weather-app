@@ -26,7 +26,7 @@ export default function WeatherCircle(props) {
     <div className="weatherCircle">
       <div className={`today-circle ${colormap[props.icon.icon]}`}>
         <div className="today-circle-content">
-          <WeatherIcon code={props.icon.icon} />
+          <WeatherIcon code={props.icon.icon} size={200} />
         </div>
       </div>
     </div>

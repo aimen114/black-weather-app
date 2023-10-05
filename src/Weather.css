@@ -50,9 +50,7 @@ h1 {
   position: relative;
   top: 8px;
 }
-.width-100 {
-  width: fit-content;
-}
+
 .today-circle {
   margin-top: 30%;
   width: 200px;
@@ -103,13 +101,9 @@ h1 {
   left: 20%;
 }
 .today-info {
-  font-size: 23px;
-  display: flex;
-  justify-content: space-around;
+  font-size: 20px;
   line-height: 60px;
-
   padding: 2%;
-
   border-radius: 20px;
 }
 .today-info-night {

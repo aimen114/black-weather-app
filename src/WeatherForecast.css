@@ -1,0 +1,9 @@
+h1 {
+  margin-bottom: 50px;
+}
+.forecast-rows {
+  margin: 0% auto;
+  border-radius: 20px;
+  padding: 4%;
+  box-shadow: inset -6px 5px 15px rgba(119, 171, 255, 0.807);
+}
