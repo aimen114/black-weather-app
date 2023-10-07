@@ -29,7 +29,7 @@ export default function TodayInfoTab(props) {
       <div className={`row today-info ${colormap[props.info.icon]}`}>
         <div className="col  weather-desc">{props.info.description}</div>
 
-        <div className="col text-end ">
+        <div className="col text-center ">
           <FontAwesomeIcon icon={icon({ name: "droplet" })} />{" "}
           {Math.round(props.info.humidity)}%
         </div>

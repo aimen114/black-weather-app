@@ -65,7 +65,6 @@ export default function Weather() {
                     <FontAwesomeIcon icon={icon({ name: "chevron-down" })} />
                   )}
                 </i>{" "}
-                <FontAwesomeIcon icon={icon({ name: "location-dot" })} />
               </h1>
               <br />
               {isSearchAreaOpen && (
@@ -111,7 +110,7 @@ export default function Weather() {
           <TodayInfoTab info={weatherData} />
         </div>
         <div>
-          <WeatherForecast />
+          <WeatherForecast city={weatherData.city} icon={weatherData.icon} />
         </div>
       </div>
     );

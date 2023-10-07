@@ -109,37 +109,35 @@ h1 {
   margin: 0 auto;
 }
 .today-info-night {
-  box-shadow: inset -4px -5px 10px 5px rgba(119, 171, 255, 0.807);
+  box-shadow: inset -4px -5px 10px 2px rgba(119, 171, 255, 0.807);
 }
 .today-info-day {
-  box-shadow: inset -4px -5px 10px 5px rgba(220, 155, 17, 0.807);
+  box-shadow: inset -4px -5px 10px 2px rgba(220, 155, 17, 0.807);
 }
-.today-info-cloudy {
-  box-shadow: inset -4px -5px 10px 5px rgba(219, 221, 106, 0.807);
-}
+
 .today-info-rain-day {
-  box-shadow: inset -4px -5px 10px 5px rgba(201, 161, 199, 0.807);
+  box-shadow: inset -4px -5px 10px 2px rgba(201, 161, 199, 0.807);
 }
 .today-info-rain-night {
-  box-shadow: inset -4px -5px 10px 5px rgba(166, 97, 163, 0.807);
+  box-shadow: inset -4px -5px 10px 2px rgba(166, 97, 163, 0.807);
 }
 .today-info-cloud-day {
-  box-shadow: inset -4px -5px 10px 5px rgba(193, 193, 193, 0.807);
+  box-shadow: inset -4px -5px 10px 2px rgba(193, 193, 193, 0.807);
 }
 .today-info-cloud-night {
-  box-shadow: inset -4px -5px 10px 5px rgba(135, 135, 135, 0.807);
+  box-shadow: inset -4px -5px 10px 2px rgba(135, 135, 135, 0.807);
 }
 .today-info-snow-day {
-  box-shadow: inset -4px -5px 10px 5px rgba(255, 255, 255, 0.807);
+  box-shadow: inset -4px -5px 10px 2px rgba(255, 255, 255, 0.807);
 }
 .today-info-snow-night {
-  box-shadow: inset -4px -5px 10px 5px rgba(233, 233, 233, 0.807);
+  box-shadow: inset -4px -5px 10px 2px rgba(233, 233, 233, 0.807);
 }
 .today-info-wind-day {
-  box-shadow: inset -4px -5px 10px 5px rgba(83, 203, 233, 0.807);
+  box-shadow: inset -4px -5px 10px 2px rgba(83, 203, 233, 0.807);
 }
 .today-info-wind-night {
-  box-shadow: inset -4px -5px 10px 5px rgba(61, 150, 172, 0.807);
+  box-shadow: inset -4px -5px 10px 2px rgba(61, 150, 172, 0.807);
 }
 .weather-desc {
   display: flex;
