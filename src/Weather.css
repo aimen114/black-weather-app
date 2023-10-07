@@ -105,6 +105,8 @@ h1 {
   line-height: 60px;
   padding: 2%;
   border-radius: 20px;
+  max-width: 100%;
+  margin: 0 auto;
 }
 .today-info-night {
   box-shadow: inset -4px -5px 10px 5px rgba(119, 171, 255, 0.807);
