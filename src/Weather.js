@@ -20,7 +20,6 @@ export default function Weather() {
     setSearchAreaOpen(!isSearchAreaOpen);
   }
   function handleSearch(response) {
-    console.log(response.data);
     setWeatherData({
       ready: true,
       city: response.data.city,
